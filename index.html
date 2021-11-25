@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kostadin Bingo!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel='icon' href='./Assets/Avatar.ico' type='image/x-icon'/ >
+    <script type="text/javascript" src="index.js"></script>
+</head>
+<body onload="checkCookies()">
+    <header>
+        <div id="left">
+            <p>Kostadin Bingo</p>
+        </div>
+    </header>
+
+    <div id="main">
+        <div id="nav">
+            <ul id="list">
+                <li>Bingo</li>
+            </ul>
+        </div>
+        <div id="section">
+            <h1 id="sectionHeading">Bingo Card</h1>
+            <button onclick="newCard()">New card</button>
+            <button onclick="clearCookies()">Delete all cookies</button>
+            <br><br>
+            <div id="content">
+                <table>
+                    <tr>
+                        <td onclick="flipFill(0)" id="0"></td>
+                        <td onclick="flipFill(1)" id="1"></td>
+                        <td onclick="flipFill(2)" id="2"></td>
+                    </tr>
+                    <tr>
+                        <td onclick="flipFill(3)" id="3"></td>
+                        <td onclick="flipFill(4)" id="4"></td>
+                        <td onclick="flipFill(5)" id="5"></td>
+                    </tr>
+                    <tr>
+                        <td onclick="flipFill(6)" id="6"></td>
+                        <td onclick="flipFill(7)" id="7"></td>
+                        <td onclick="flipFill(8)" id="8"></td>
+                    </tr>
+                </table>
+            </div>
+                                                                    
+            
+        </div>
+    </div>
+
+    <footer>
+        <div id="left">
+            &copy Adam 2021
+        </div>
+        
+        <div id="right">
+            <a href="https://github.com/AdamDIOM/bingo" id="link">Contribute</a>
+        </div>
+
+        <div id="center">
+                This site uses cookies. Not afilliated with IOMG.
+        </div>
+    </footer>
+</body>
+</html>
