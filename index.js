@@ -3,11 +3,14 @@
 async function newCard(){
     lecturer = "kostadin";
     splitCookies = cookieArray = document.cookie.split(';');
-    for(s in splitCookies){
-        if(cookieArray[s].split('=')[0] == 0){
-            lecturer = cookieArray[s].split('=')[1];
+    if(cookieArray.length > 1){
+        for(s in splitCookies){
+            if(cookieArray[s].split('=')[0] == 0){
+                lecturer = cookieArray[s].split('=')[1];
+            }
         }
     }
+    
 
 
     clearCookies();
@@ -114,11 +117,11 @@ function flipFill(id){
     console.log("click");
     theElement = document.getElementById(id);
 
-    if(theElement.style.background == "pink"){
+    if(theElement.style.background != "antiquewhite"){
         theElement.style.background = "antiquewhite";
     }
     else{
-        theElement.style.background = "pink";
+        theElement.style.background = "#ed2939";
     }
 
 

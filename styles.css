@@ -1,5 +1,5 @@
 body{
-    color:darkslategray;
+    color:#d3d3d3;
     background-color: rgb(34, 37, 41);
     padding:0 1vw 0 1vw;
     margin:0;
@@ -7,13 +7,13 @@ body{
     font-size:calc(2vmin + 1vmax);
 }
 header{
-    background-color: lightslategray;
+    background-color: #d3d3d3;
     font-size: 2.7vh;
     height: 9vh;
     width:98%;
     padding:0.5vh 1% 0.5vh 1%;
     margin:0;
-    color:greenyellow;
+    color:#ed2939;
     font-weight: 1000;
 }
 #left{
@@ -42,8 +42,8 @@ header{
 }
 #nav ul li{
     background-color: white;
-    border-top:1px solid grey;
-    border-bottom: 1px solid grey;
+    border-top:1px solid #ed2939;
+    border-bottom: 1px solid #ed2939;
     color:rgb(88, 88, 88);
     padding:0.5vh 0.5vw 0.5vh 0.5vw;
     overflow-wrap:break-word;
@@ -64,7 +64,7 @@ header{
 }
 #nav{
     float:left;
-    background-color: grey;
+    background-color: #ed2939;
     width: 20%;
     padding:2.5vh 0vw 2.5vh 0vw;
 }
@@ -73,7 +73,7 @@ h1{
 }
 h2, h2 #link{
     font-size:calc(2vmin + 1vmax);
-    color:darkslategray;
+    color:#d3d3d3;
 }
 h2 #link:hover{
     color:forestgreen;
@@ -84,7 +84,7 @@ h2 #link:active{
 #section{
     float:right;
     width: calc(80% - 2vw);
-    background-color: antiquewhite;
+    background-color: #000088;
     padding:2.5vh 1vw 2.5vh 1vw;
 }
 #sectionHeading{
@@ -133,7 +133,8 @@ tr{
     height:14vh;
 }
 td{
-    border:5px solid lime;
+    border:5px solid #d3d3d3;
+    color:darkslategray;
     margin:0px;
     width:25%;
     text-align:center;
@@ -141,4 +142,10 @@ td{
 }
 #content{
     margin-top:0px;
+}
+
+button{
+    background-color:#d3d3d3;
+    border-radius: 10px;
+    font-size:15pt;
 }
