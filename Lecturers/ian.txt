@@ -7,3 +7,4 @@ memory
 *asks a question and gets no answer*
 *half-empty lecture theatre*
 raspberry pi
+*stands on a chair*
