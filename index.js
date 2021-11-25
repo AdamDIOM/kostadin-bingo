@@ -1,6 +1,15 @@
 //const { element } = require("prop-types");
 
 async function newCard(){
+    lecturer = "kostadin";
+    splitCookies = cookieArray = document.cookie.split(';');
+    for(s in splitCookies){
+        if(cookieArray[s].split('=')[0] == 0){
+            lecturer = cookieArray[s].split('=')[1];
+        }
+    }
+
+
     clearCookies();
     clearFill();
     var phrases = [];
@@ -11,7 +20,7 @@ async function newCard(){
         console.log(text);
         textstr = text;
     } );*/
-    const response = await fetch('phrases.txt')
+    const response = await fetch(`Lecturers/${lecturer}.txt`)
     .then(response => response.text())
     text = response;
     console.log("test" + text);
@@ -48,13 +57,13 @@ function fillCard(randomPhrases){
     for(i = 0; i < 9; i++){
         cell = document.getElementById(i);
         cell.innerHTML = randomPhrases[i];
-        document.cookie = `${i}=${randomPhrases[i]};`
+        document.cookie = `${i + 1}=${randomPhrases[i]};`
     }
 }
 
 function clearCookies(){
     for(i = 0; i < 9; i++){
-        document.cookie = `${i}=; expires=Thu, 01 Jan 1970 00:00:00 UTC;`;
+        document.cookie = `${i + 1}=; expires=Thu, 01 Jan 1970 00:00:00 UTC;`;
     }
     console.log(document.cookie);
     console.log("COOKIES CLEARED");
@@ -69,7 +78,7 @@ function checkCookies() {
       console.log("hi");
       cookieArray = document.cookie.split(';');
 
-      if(cookieArray.length < 9) {
+      if(cookieArray.length < (9 + 1)) {
         newCard()
       }  
       
@@ -85,7 +94,7 @@ function checkCookies() {
         console.log(cookieArray[s].split('=')[0]);
         console.log(cookieArray[s].split('=')[1]);
         for(i = 0; i < 9; i++){
-            if(cookieArray[s].split('=')[0] == i){
+            if(cookieArray[s].split('=')[0] == i + 1){
                 randomPhrases.push(cookieArray[s].split('=')[1])
             }
         }
@@ -119,4 +128,10 @@ function clearFill(){
     for(i = 0; i < 9; i++){
         document.getElementById(i).style.background = "antiquewhite";
     }
+}
+
+
+function changeLecturer(lecturer){
+    document.cookie = `0=${lecturer}`;
+    newCard();
 }

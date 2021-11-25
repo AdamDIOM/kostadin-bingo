@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Kostadin Bingo!</title>
+    <title>Lecturer Bingo!</title>
     <link rel="stylesheet" href="styles.css">
     <link rel='icon' href='./Assets/Avatar.ico' type='image/x-icon'/ >
     <script type="text/javascript" src="index.js"></script>
@@ -9,14 +9,16 @@
 <body onload="checkCookies()">
     <header>
         <div id="left">
-            <p>Kostadin Bingo</p>
+            <p>Lecturer Bingo</p>
         </div>
     </header>
 
     <div id="main">
         <div id="nav">
             <ul id="list">
-                <li>Kostadin</li>
+                <li onclick="changeLecturer('kostadin')">Kostadin</li>
+                <li onclick="changeLecturer('ali')">Ali</li>
+                <li onclick="changeLecturer('ian')">Ian</li>
             </ul>
         </div>
         <div id="section">
