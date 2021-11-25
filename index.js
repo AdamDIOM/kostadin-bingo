@@ -53,7 +53,7 @@ function fillCard(randomPhrases){
 }
 
 function clearCookies(){
-    for(i = 0; i < 16; i++){
+    for(i = 0; i < 9; i++){
         document.cookie = `${i}=; expires=Thu, 01 Jan 1970 00:00:00 UTC;`;
     }
     console.log(document.cookie);
@@ -69,7 +69,7 @@ function checkCookies() {
       console.log("hi");
       cookieArray = document.cookie.split(';');
 
-      if(cookieArray.length < 16) {
+      if(cookieArray.length < 9) {
         newCard()
       }  
       
@@ -84,7 +84,7 @@ function checkCookies() {
         console.log(cookieArray[s]);
         console.log(cookieArray[s].split('=')[0]);
         console.log(cookieArray[s].split('=')[1]);
-        for(i = 0; i < 16; i++){
+        for(i = 0; i < 9; i++){
             if(cookieArray[s].split('=')[0] == i){
                 randomPhrases.push(cookieArray[s].split('=')[1])
             }
