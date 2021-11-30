@@ -9,3 +9,11 @@ memory
 raspberry pi
 *stands on a chair*
 *gets something wrong*
+memory
+byte
+hardware
+operating system
+kernel
+multitasking
+finishes early
+cpu
